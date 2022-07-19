@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --paragraph-font: 'Mulish', sans-serif;
+    --heading-font: 'Mulish', sans-serif;
+    
+    --color-white-bg: #000;
+    --color-black-bg: #fff;
+    --link-color: #000;
+
+    --side-spacing: 0 0.3em 0 0.3em;
+
+    --border-style: 1px solid rgb(245, 244, 244);
+    --border-radius: 0.4em;
+}
+
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #fff;
+    color: var(--color-white-bg);
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+/* Global */
+
+.display__show {
+    display: block;
+}
+
+.display__hide {
+    display: none;
+}
+
+body, p {
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+ul, li {
+    list-style: none;
+    font-family: var(--paragraph-font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-family: var(--paragraph-font);
+}
+
+/* end */
+
+.mobile__view {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile__view {
+        display: block;
+    }
+
+    .mobile__view nav .navigation__icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0.3em;
+    }
+
+    .mobile__view nav .navigation__icons .day__night {
+        /* width: 13vw; */
+        /* height: 4vh; */
+        /* border: 1px solid rgb(231, 231, 231); */
+        border-radius: 0.5em;
+        padding: 0.2em  0.2em 0.05em 0.2em;
+        text-align: right;
+    }
+
+    .mobile__view nav .side__navigation__container {
+        position: absolute;
+        background: #eefff3;
+        z-index: 10;
+        height: 100vh;
+        width: 52vw;
+        top: 0;
+        left: 0;
+        padding: 1em 1em 1em 1em;
+        /* border-right: 1px solid rgb(58, 58, 58); */
+    }
+
+    .mobile__view .side__navigation__container ul li {
+        margin-top: 2em;
+    }
+    
+    .mobile__view .side__navigation__container ul li a {
+    }
+
+    .mobile__view nav .side__navigation__container .aalbulm__logo {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    main.content .individual__and__date {
+        padding: var(--side-spacing);
+    }   
+
+    main .individual__and__date .i__a__date__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    main h4 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    main .individual__and__date .i__a__date__bottom {
+        display: flex;
+        justify-content: space-between;
+        border: var(--border-style);
+        padding: 0.5em 0.3em;
+        border-radius: 0.3em;
+        margin-top: 0.6em;
+
+    }
+
+    main .i__a__date__bottom .person {
+        display: flex;
+    }
+
+    main .person p {
+        margin-left: 0.8em;
+    }
+
+    main .create__activity__btn a {
+        margin-top: 1.5em;
+        display: flex;
+        align-items: center;
+        padding: var(--side-spacing);
+    }
+
+    main .create__activity__btn h4 {
+        margin-left: 0.4em;
+    }
+
+    main .activities__container .heading {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top: var(--border-style);
+        border-bottom: var(--border-style);
+        padding: 4em 0.3em 1em 0.3em;
+    }
+
+    main .heading small a {
+        color: #13d3f5;
+    }
+
+    main .today__tomorrow__task {
+        display: flex;
+        border: var(--border-style);
+        margin:var(--side-spacing);
+        width: fit-content;
+        margin-top: 0.5em;
+        border-radius: 0.3em;
+    }
+
+    main .today__tomorrow__task p {
+        padding: 0.3em 0.4em;
+    }
+
+    .active__day {
+        color: #13d3f5;
+    }
+
+    main .activity .activity__content {
+        margin-top: 2em;
+    }
+
+    main .activity__content .high__priority {
+        display: flex;
+        border: var(--border-style);
+        margin:var(--side-spacing);
+        width: fit-content;
+        margin-top: 0.5em;
+        border-radius: 0.3em;
+        padding: 0.3em 0.5em;
+    }
+
+    main .high__priority p {
+        margin-left: .5em;
+    }
+
+    main .high__priority__activities:first-child {
+        border-top: transparent !important;
+    }
+
+
+    main .activity .task {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0.3em 1em 0.3em;
+        border-top: var(--border-style);
+    }
+
+    main .task .rep__icon {
+        background-color: #F9FBFB;
+        width: fit-content;
+        height: fit-content;
+        padding: 0.3em 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    main .task .task__content {
+        display: flex;
+    }
+
+    main .task .description {
+        margin-left: 0.5em;
+    }
+
+    main .task .description .heading__2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .heading__2 span {
+        margin-left: 0.5em;
+        margin-top: 0.3em;
+        color: rgb(131, 131, 131);
+        font-size: 0.8rem;
+    }
+
+    main .categories {
+        margin-top: 0.5em;
+    }
+
+    main .description .categories small {
+        padding: 0.2em 0.5em;
+        border: var(--border-style);
+        border-radius: 0.3em;
+    }
+
+    main .description .time__frame {
+        display: flex;
+        margin-top: 0.4em;
+    }
+
+    main .time__frame .period {
+        margin-top: 0.24em;
+    }
+
+    main .time__frame .line__break {
+        height: 2vh;
+        border-right: var(--border-style);
+        margin: .3em .4em 0 0.4em;
+    }
+
+    main .task .task__photos {
+        display: flex;
+        transform: rotate(5deg);
+    }
+
+    main .task .task__photos .photo__container {
+        width: 8vw;
+        height: auto;
+        border-radius: 0.4em;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .task__photos .photo__container:nth-child(1) {
+        margin-right: 0.4em;
+    }
+
+    main .photo__container img {
+        width: inherit;
+
+    }
+
+    main .pic__and__date {
+        /* padding-top: 3em !important; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    main .medium {
+        margin-top: 3em;
+    }
+
+}
